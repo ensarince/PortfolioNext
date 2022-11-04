@@ -26,18 +26,19 @@ function Contact({}: Props) {
     <motion.div className='h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center'>
       <h3 className='absolute uppercase tracking-widest text-gray-500 text-2xl top-10'>Contact</h3>
        <div className='flex flex-col space-y-10'>
-        <h4 className='text-4xl font-semibold text-center sm:text-2xl'>
+{/*         <h4 className='text-4xl font-semibold text-center sm:text-2xl'>
+          I've got just what you need. {" "}
           <span className='decoration-cursorColor underline'>Let's Talk</span> 
-        </h4>
+        </h4> */}
         <div className='space-y-10'>
            <div className='flex items-center space-x-5 justify-center'>
             <PhoneIcon className='text-cursorColor h-7 w-7 animate-pulse' />
-            <p className='text-2xl '>+123456789</p>
+            <p className='text-2xl'>+123456789</p>
            </div>
 
            <div className='flex items-center space-x-5 justify-center'>
             <MapPinIcon className='text-cursorColor h-7 w-7 animate-pulse' />
-            <p className='text-2xl '>123 Bleicstrasse</p>
+            <p className='text-2xl'>123 Bleicstrasse</p>
            </div>
 
            
