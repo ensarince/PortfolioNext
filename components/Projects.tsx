@@ -31,7 +31,7 @@ function Projects({projects}: Props) {
             snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thin scrollbar-thumb-cursorColor'>
             {/* Projects */}
             {projects?.map((project, i) => (
-              <div className="w-screen flex flex-shrink-0 snap-center flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen">
+              <div key={i} className="w-screen flex flex-shrink-0 snap-center flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen">
                 <motion.img
                 className='md:md-0 flex flex-shrink-0 w-56 object-cover
                 md:rounded-lg md:w-64 md:h-95 xl:w-1/2 ' 
