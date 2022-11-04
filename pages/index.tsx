@@ -9,7 +9,7 @@ import Contact from "../components/Contact"
 import Head from 'next/head'
 
 
-import { GetStaticProps } from 'next'
+import { GetServerSideProps, GetStaticProps } from 'next'
 import {PageInfo, Experience, Skill, Project, Social} from "../typings"
 import { fetchExperiences } from '../utils/fetchExperiences'
 import { fetchPageInfo } from '../utils/fetchPageInfo'
@@ -77,7 +77,7 @@ const Home = ({ pageInfo, experiences, skills, socials, projects }: Props) => {
 
 export default Home;
 
-export const getStaticProps: GetStaticProps<Props> =  async () => {
+export const getStaticProps: GetServerSideProps<Props> =  async () => {
   const pageInfo: PageInfo = await fetchPageInfo();
   const experiences: Experience[] = await fetchExperiences();
   const skills: Skill[] = await fetchSkills();
@@ -93,6 +93,5 @@ export const getStaticProps: GetStaticProps<Props> =  async () => {
       socials
     },
     //nextjs will attempt to re-validate the page every request and 10 seconds
-    revalidate: 10,
   }
 }
