@@ -25,7 +25,7 @@ function Projects({projects}: Props) {
         viewport = {{once: true}}
         transition={{duration: 1.2}}
         className='h-screen relative flex overflow-hidden flex-col text-left items-center md:flex-row max-w-full justify-evenly mx-auto z-0'>
-        <h3 className='absolute top-5 uppercase tracking-widest text-gray-500 text-2xl'>Projects</h3>
+        <h3 className='absolute top-5 uppercase tracking-widest text-gray-500 text-2xl sm:top-12'>Projects</h3>
 
         <div className='relative w-full flex overflow-x-scroll overflow-y-hidden snap-x 
             snap-mandatory z-20 scrollbar-track-gray-400/20 scrollbar-thin scrollbar-thumb-cursorColor'>
@@ -33,7 +33,7 @@ function Projects({projects}: Props) {
             {projects?.map((project, i) => (
               <div key={i} className="w-screen flex flex-shrink-0 snap-center flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen">
                 <motion.img
-                className='md:md-0 flex flex-shrink-0 sm:w-48 sm:h-52 object-cover
+                className='flex flex-shrink-0 sm:w-42 sm:h-36 sm:rounded-md object-cover
                 md:rounded-lg md:w-64 md:h-95 xl:w-1/2 xl:h-3/4 ' 
                   initial={{
                     y:-300,

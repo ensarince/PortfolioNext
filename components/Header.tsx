@@ -49,7 +49,7 @@ export default function Header({socials}: Props) {
 
         className="flex flex-row items-center text-gray-300 cursor-pointer">
             <SocialIcon
-              className="cursor-pointer"
+              className="cursor-pointer sm: mr-5"
               network="email"
               fgColor="gray"
               bgColor="transparent"
