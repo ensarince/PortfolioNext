@@ -18,7 +18,7 @@ import { fetchSkills } from '../utils/fetchSkills'
 import { fetchSocials } from '../utils/fetchSocials'
 
 type Props = {
-  pageInfo: PageInfo;
+  pageInfo: PageInfo[];
   experiences: Experience[];
   skills: Skill[];
   projects: Project[]
@@ -30,37 +30,31 @@ const Home = ({ pageInfo, experiences, skills, socials, projects }: Props) => {
     <div className="bg-yt-gray text-white h-screen snap-y snap-mandatory overflow-y-scroll z-0
       overflow-x-hidden scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-cursorColor">
       <Head>
-        <title>{pageInfo?.name} - Portfolio</title> 
+        <title>{(pageInfo as any)?.name} - Portfolio</title> 
       </Head>
-       
-        <Header socials={socials} />
+      
+      <Header socials={socials} />
 
-       {/* Hero */}
        <section className="snap-start" id="hero"> 
-        <Hero pageInfo = {pageInfo}/>
+        <Hero pageInfo={pageInfo}/>
        </section>
 
-       {/* About */}
        <section id="about" className="snap-center">
         <About pageInfo={pageInfo} />
        </section>
 
-       {/* Experience */}
        <section id="experience" className="snap-center">
         <WorkExperience experiences={experiences}  />
        </section>
  
-       {/* Skills */}
        <section id='skills' className='snap-center'>
         <Skills skills={skills} />
        </section>
 
-       {/* Projects */}
        <section id='projects' className='snap-center'>
         <Projects projects={projects} />
        </section>
 
-       {/* Contact me! */}
        <section id='contact' className='snap-center'>
         <Contact /> 
        </section>

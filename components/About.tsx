@@ -6,7 +6,7 @@ import imageUrlBuilder from '@sanity/image-url'
 
 
 type Props = {
-  pageInfo: PageInfo
+  pageInfo?: PageInfo[]
 }
 
 function About({pageInfo}: Props) {
@@ -32,7 +32,7 @@ function About({pageInfo}: Props) {
         <h3 className="absolute top-24 uppercase tracking-widest text-gray-500 text-2xl">About</h3>
     
         <motion.img 
-            src={urlFor(pageInfo?.profilePic).url()} 
+            src={urlFor((pageInfo as any)?.profilePic).url()} 
             className="-mb-20 md:md-0 flex-shrink-0 w-56 rounded-full object-cover
             md:rounded-lg md:w-64 md:h-95 xl:w-650 xl:h-650 "
             />
@@ -42,7 +42,7 @@ function About({pageInfo}: Props) {
             <span className="underline decoration-cursorColor">little</span>  
             {" "}background</h4>
             <p className="text-sm ">
-            {pageInfo?.backgroundInformation}
+            {(pageInfo as any)?.backgroundInformation}
             </p>
         </div>
             

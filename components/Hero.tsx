@@ -8,7 +8,7 @@ import imageUrlBuilder from '@sanity/image-url'
 
 
 type Props = {
-    pageInfo: PageInfo
+    pageInfo?: PageInfo[]
 }
 
 export default function Hero({pageInfo}: Props) {
@@ -20,7 +20,7 @@ export default function Hero({pageInfo}: Props) {
     }
   
     const [text] = useTypewriter({
-         words: [`Hi, I am ${pageInfo?.name}`, "<developer/>", "climber🧗‍♂️"],
+         words: [`Hi, I am ${(pageInfo as any).name}`, "<developer/>", "climber🧗‍♂️"],
          loop: true,
          delaySpeed: 2000,
       })
@@ -28,9 +28,9 @@ export default function Hero({pageInfo}: Props) {
   return (
     <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
         <BackgroundCircles />
-        <img className="relative rounded-full h-32 w-32 mx-auto object-cover" src={urlFor(pageInfo?.heroImage).url()} alt="" />
+        <img className="relative rounded-full h-32 w-32 mx-auto object-cover" src={urlFor((pageInfo as any)?.heroImage).url()} alt="" />
         <div className="z-20">
-            <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-widest">{pageInfo?.role}</h2>
+            <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-widest">{(pageInfo as any)?.role}</h2>
             <h1 className="text-5xl lg:text-6xl font-semibold px-10 mb-10">
                 <span>{text}</span>
                 <Cursor cursorColor='#A80B44' />

@@ -15,12 +15,12 @@ interface Image{
 
 export interface PageInfo extends SanityBody{
     _type: "pageInfo"
+    name: string
     address: string
     backgroundInformation: string
     email: string
     role: string
     heroImage: Image
-    name: string
     phoneNumber: string
     profilePic: Image
     socials?: Array
