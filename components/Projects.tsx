@@ -33,8 +33,8 @@ function Projects({projects}: Props) {
             {projects?.map((project, i) => (
               <div key={i} className="w-screen flex flex-shrink-0 snap-center flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen">
                 <motion.img
-                className='md:md-0 flex flex-shrink-0 w-56 object-cover
-                md:rounded-lg md:w-64 md:h-95 xl:w-1/2 ' 
+                className='md:md-0 flex flex-shrink-0 sm:w-48 sm:h-52 object-cover
+                md:rounded-lg md:w-64 md:h-95 xl:w-1/2 xl:h-3/4 ' 
                   initial={{
                     y:-300,
                     opacity:0

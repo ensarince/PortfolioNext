@@ -5,6 +5,18 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+
+    screens: {
+      'sm': '300px',
+      // => @media (min-width: 576px) { ... }
+
+      'md': '500px',
+      // => @media (min-width: 960px) { ... }
+
+      'lg': '900px',
+      // => @media (min-width: 1440px) { ... }
+      'xl': '1200px'
+    },
     extend: {
       colors: {
         'yt-gray': '#242424',
