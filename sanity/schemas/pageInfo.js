@@ -4,9 +4,19 @@ export default {
   type: 'document',
   fields: [
     {
-      name:"name",
-      title:"Name",
-      type: "string",
+      name:"address",
+      title:"Address",
+      type: "string"
+    },
+    {
+      name:"backgroundInformation",
+      title:"BackgroundInformation",
+      type: "string"
+    },
+    {
+      name:"email",
+      title:"Email",
+      type: "string"
     },
     {
       name:"role",
@@ -22,10 +32,16 @@ export default {
       }
     },
     {
-      name:"backgroundInformation",
-      title:"BackgroundInformation",
+      name:"name",
+      title:"Name",
+      type: "string",
+    },
+    {
+      name:"phoneNumber",
+      title:"PhoneNumber",
       type: "string"
     },
+
     {
       name:"profilePic",
       title:"ProfilePic",
@@ -33,21 +49,6 @@ export default {
       options: {
         hotspot: true
       }
-    },
-    {
-      name:"phoneNumber",
-      title:"PhoneNumber",
-      type: "string"
-    },
-    {
-      name:"email",
-      title:"Email",
-      type: "string"
-    },
-    {
-      name:"address",
-      title:"Address",
-      type: "string"
     },
     {
       name:"socials",

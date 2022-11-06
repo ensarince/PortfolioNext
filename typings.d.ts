@@ -23,6 +23,7 @@ export interface PageInfo extends SanityBody{
     name: string
     phoneNumber: string
     profilePic: Image
+    socials?: Array
 }
 
 export interface Technology extends SanityBody{

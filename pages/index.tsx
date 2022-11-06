@@ -25,6 +25,7 @@ type Props = {
   socials: Social[];
 }
 const Home = ({ pageInfo, experiences, skills, socials, projects }: Props) => {
+  console.log(pageInfo)
   return (
     <div className="bg-yt-gray text-white h-screen snap-y snap-mandatory overflow-y-scroll z-0
       overflow-x-hidden scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-cursorColor">
@@ -77,8 +78,8 @@ const Home = ({ pageInfo, experiences, skills, socials, projects }: Props) => {
 
 export default Home;
 
-export const getServerSideProps: GetServerSideProps<Props> =  async () => {
-  const pageInfo: PageInfo = await fetchPageInfo();
+export const getServerSideProps : GetServerSideProps<Props> =  async () => {
+  const pageInfo: PageInfo[] = await fetchPageInfo();
   const experiences: Experience[] = await fetchExperiences();
   const skills: Skill[] = await fetchSkills();
   const projects: Project[] = await fetchProjects();
