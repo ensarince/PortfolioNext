@@ -62,7 +62,7 @@ const Home = ({ pageInfo, experiences, skills, socials, projects }: Props) => {
        <Link href="#hero">
           <footer className='sticky bottom-10 sm:bottom-14 w-full cursor-pointer'>
             <div className='flex items-center justify-center'>
-              <img className='h-10 w-10 rounded-full filter grayscale hover:grayscale-0 cursor-pointer' src="http://ensrnc.herokuapp.com/images/2.jpg" alt="" />
+              <img className='h-10 w-10 rounded-full filter grayscale hover:grayscale-0 cursor-pointer' src="https://illustoon.com/photo/thum/4519.png" alt="" />
             </div>
           </footer>
         </Link>
